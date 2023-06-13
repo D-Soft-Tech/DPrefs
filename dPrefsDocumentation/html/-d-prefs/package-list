@@ -1,0 +1,25 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.dsofttech.dprefs.domanin////PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/index.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract///PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/index.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/clearAllPrefs/#/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/clear-all-prefs.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/getBoolean/#kotlin.String#kotlin.Boolean?/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/get-boolean.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/getInt/#kotlin.String#kotlin.Int/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/get-int.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/getObject/#kotlin.String#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/get-object.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/getString/#kotlin.String#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/get-string.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/putBoolean/#kotlin.String#kotlin.Boolean/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/put-boolean.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/putInt/#kotlin.String#kotlin.Int/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/put-int.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/putObject/#kotlin.String#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/put-object.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/putString/#kotlin.String#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/put-string.html
+$dokka.location:com.dsofttech.dprefs.domanin/DPrefsSharedPrefsManagerContract/removePref/#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.domanin/-d-prefs-shared-prefs-manager-contract/remove-pref.html
+$dokka.location:com.dsofttech.dprefs.models.enums////PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/index.html
+$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue.DEFAULT_VALUE_INT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-i-n-t/index.html
+$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue.DEFAULT_VALUE_STRING///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-s-t-r-i-n-g/index.html
+$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue///PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/index.html
+$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue/code/#/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/code.html
+$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue/value/#/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/value.html
+$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue/valueOf/#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/value-of.html
+$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue/values/#/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/values.html
+com.dsofttech.dprefs.domanin
+com.dsofttech.dprefs.models.enums
+

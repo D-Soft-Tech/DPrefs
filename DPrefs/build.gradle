@@ -31,6 +31,10 @@ android {
     }
 }
 
+tasks.dokkaHtml.configure {
+    outputDirectory.set(file("../dPrefsDocumentation/html"))
+}
+
 dependencies {
 
     def encrypted_shared_prefs = "1.1.0-alpha06"
@@ -45,5 +49,6 @@ dependencies {
 
     // Encrypted Shared Prefs
     implementation "androidx.security:security-crypto-ktx:$encrypted_shared_prefs"
+    // Dokka
     dokkaPlugin "org.jetbrains.dokka:android-documentation-plugin:$dokka_version"
 }
