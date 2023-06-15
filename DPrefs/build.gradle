@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
     id 'org.jetbrains.dokka' version '1.8.20'
 }
 
@@ -53,4 +54,16 @@ dependencies {
     dokkaPlugin "org.jetbrains.dokka:android-documentation-plugin:$dokka_version"
     // Gson
     implementation "com.google.code.gson:gson:$gson_version"
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.dsofttech.dprefs'
+                artifactId = 'dPrefs'
+                version = '1.0.0'
+            }
+        }
+    }
 }
