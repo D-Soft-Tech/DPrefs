@@ -116,6 +116,12 @@ internal class DPrefsManager(private val context: Context) : DPrefsManagerContra
                 gson.fromJson(it, T::class.java)
             }
 
+    /**
+     * Creates the preferences instance
+     *
+     * @param [context] specifies the scope in the application where this instance should be available. Pass it the applicationContext.
+     * @return [SharedPreferences] The preference object that is created
+     * */
     private fun getEncryptedSharedPrefs(context: Context): SharedPreferences {
         val masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
         return EncryptedSharedPreferences.create(
@@ -126,4 +132,7 @@ internal class DPrefsManager(private val context: Context) : DPrefsManagerContra
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,
         )
     }
+
+    override fun doesKeyExists(key: String): Boolean =
+        dSharedPrefs.contains(key)
 }

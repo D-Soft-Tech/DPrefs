@@ -167,4 +167,12 @@ internal interface DPrefsManagerContract {
      * This is synonymous to dropping or deleting a complete table in sql database. Use with caution.
      * */
     fun clearAllPrefs()
+
+    /**
+     * Checks if the key exists before in preference
+     *
+     * @param [key] The key to be checked
+     * @return true if the key already exists or false if not
+     * */
+    fun doesKeyExists(key: String): Boolean = false
 }
