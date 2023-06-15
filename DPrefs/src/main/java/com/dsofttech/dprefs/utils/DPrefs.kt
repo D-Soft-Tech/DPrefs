@@ -84,7 +84,7 @@ object DPrefs : DPrefsManagerContract {
     override fun getDouble(key: String, defaultValue: Double): Double =
         dPrefs.getDouble(key, defaultValue)
 
-    override fun <T> getObject(key: String, type: T): T? =
+    override fun <T> getObject(key: String, type: T): Any? =
         dPrefs.getObject(key, type)
 
     override fun removePref(key: String) {

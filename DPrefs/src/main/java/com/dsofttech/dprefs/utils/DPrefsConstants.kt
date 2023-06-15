@@ -6,7 +6,7 @@ package com.dsofttech.dprefs.utils
  * @see [https://www.linkedin.com/in/adebayo-oloyede]
  * @see [https://github.com/D-Soft-Tech]
  * */
-object DPrefsConstants {
+internal object DPrefsConstants {
     /**
      * `"d_prefs"` - Which is the name which the generated preferences file is saved by.
      * */

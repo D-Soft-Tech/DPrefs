@@ -87,8 +87,8 @@ internal class DPrefsManager(private val context: Context) : DPrefsManagerContra
         dSharedPrefs.edit().putString(key, gson.toJson(value)).apply()
     }
 
-    override fun <T> getObject(key: String, type: T): T? =
-        getObject<Any>(key, dSharedPrefs, gson) as T?
+    override fun <T> getObject(key: String, type: T): Any? =
+        getObject<Any>(key, dSharedPrefs, gson)
 
     override fun removePref(key: String) {
         dSharedPrefs.edit().remove(key).apply()

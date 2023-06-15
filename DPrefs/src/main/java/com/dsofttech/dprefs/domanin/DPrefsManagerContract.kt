@@ -150,7 +150,7 @@ internal interface DPrefsManagerContract {
      * @return An object of type [T] which was saved or null if no value exists for the [key]
      * @see [putObject]
      * */
-    fun <T> getObject(key: String, type: T): T?
+    fun <T> getObject(key: String, type: T): Any?
 
     /**
      * Removes a preference value.
