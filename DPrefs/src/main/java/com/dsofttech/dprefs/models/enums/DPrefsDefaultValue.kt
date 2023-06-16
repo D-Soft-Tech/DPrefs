@@ -9,7 +9,7 @@ package com.dsofttech.dprefs.models.enums
  * @see [https://www.linkedin.com/in/adebayo-oloyede]
  * @see [https://github.com/D-Soft-Tech]
  * */
-internal enum class DPrefsDefaultValue(val value: Any) {
+enum class DPrefsDefaultValue(val value: Any) {
     /**
      * Provides `""`, i.e empty [String]
      * */

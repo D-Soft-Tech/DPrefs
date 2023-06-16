@@ -13,4 +13,4 @@ package com.dsofttech.dprefs.utils.exceptions
  * @see [https://www.linkedin.com/in/adebayo-oloyede]
  * @see [https://github.com/D-Soft-Tech] for more about the author.
  * */
-internal open class DPrefsException(message: String) : Exception(message)
+open class DPrefsException(message: String) : Exception(message)

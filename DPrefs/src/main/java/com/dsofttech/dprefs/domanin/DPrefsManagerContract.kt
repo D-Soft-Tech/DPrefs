@@ -1,6 +1,10 @@
 package com.dsofttech.dprefs.domanin // ktlint-disable filename
 
 import com.dsofttech.dprefs.models.enums.DPrefsDefaultValue
+import com.dsofttech.dprefs.utils.DPrefs
+import com.dsofttech.dprefs.utils.exceptions.DPrefsException
+import com.dsofttech.dprefs.utils.exceptions.DPrefsKeyAlreadyExistsException
+import com.dsofttech.dprefs.utils.exceptions.DPrefsNotInitializedException
 
 /**
  * An interface that defines all the contracts that can be performed by this preferences library
@@ -16,7 +20,11 @@ internal interface DPrefsManagerContract {
      * Saves a preference value of type [String]
      *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getString] method call
-     * @param [value] This is the exact preference that you want to save into preferences
+     * @param [value] This is the exact preference that you want to save into preferences.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
+     * @see [DPrefs.initializeDPrefs]
+     * @see [DPrefsException]
      * */
     fun putString(key: String, value: String)
 
@@ -24,7 +32,11 @@ internal interface DPrefsManagerContract {
      * Saves a preference value of type [Int]
      *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getInt] method call
-     * @param [value] This is the exact string value that you want to save into preferences
+     * @param [value] This is the exact string value that you want to save into preferences.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
+     * @see [DPrefs.initializeDPrefs]
+     * @see [DPrefsException]
      * */
     fun putInt(key: String, value: Int)
 
@@ -32,7 +44,11 @@ internal interface DPrefsManagerContract {
      * Saves a preference value of type [Boolean]
      *
      * @param [key] This is the uniqueId with which the preference value will be saved. this is also what should be used to retrieve the saved value from preference by passing it to [getBoolean] method call
-     * @param [value] This is the boolean value that you want to save into preference
+     * @param [value] This is the boolean value that you want to save into preference.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
+     * @see [DPrefs.initializeDPrefs]
+     * @see [DPrefsException]
      * */
     fun putBoolean(key: String, value: Boolean)
 
@@ -40,7 +56,11 @@ internal interface DPrefsManagerContract {
      * Saves a preference value of type [Float]
      *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getFloat] method call
-     * @param [value] This is the exact float value that you want to save into preferences
+     * @param [value] This is the exact float value that you want to save into preferences.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
+     * @see [DPrefs.initializeDPrefs]
+     * @see [DPrefsException]
      * */
     fun putFloat(key: String, value: Float)
 
@@ -48,7 +68,11 @@ internal interface DPrefsManagerContract {
      * Saves a preference value of type [Long]
      *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getLong] method call
-     * @param [value] This is the exact Long value that you want to save into preferences
+     * @param [value] This is the exact Long value that you want to save into preferences.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
+     * @see [DPrefs.initializeDPrefs]
+     * @see [DPrefsException]
      * */
     fun putLong(key: String, value: Long)
 
@@ -56,7 +80,11 @@ internal interface DPrefsManagerContract {
      * Saves a preference value of type [Double]
      *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getDouble] method call
-     * @param [value] This is the exact Double value that you want to save into preferences
+     * @param [value] This is the exact Double value that you want to save into preferences.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
+     * @see [DPrefs.initializeDPrefs]
+     * @see [DPrefsException]
      * */
     fun putDouble(key: String, value: Double)
 
@@ -64,7 +92,11 @@ internal interface DPrefsManagerContract {
      * Save an object as a preference
      *
      * @param [key] This is the uniqueId with which the object [value] will be saved, this is also what the saved object will be accessed by from preference by passing it to [getObject] method call
-     * @param [value] This is the object that you want to save into preference
+     * @param [value] This is the object that you want to save into preference.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
+     * @see [DPrefs.initializeDPrefs]
+     * @see [DPrefsException]
      * */
     fun <T> putObject(key: String, value: T)
 
@@ -74,6 +106,8 @@ internal interface DPrefsManagerContract {
      * @param [key] This is the uniqueId with which the preference value was saved by the [putString] method
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
      * @return [String] which is the saved value, if the value does not exist in preferences it returns [defaultValue] passed to it or empty string if [defaultValue] is not set.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * */
     fun getString(
         key: String,
@@ -86,6 +120,8 @@ internal interface DPrefsManagerContract {
      * @param [key] This is the uniqueId with which the preference value was saved by [putInt]
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
      * @return [Int] which is the saved value , if the value does not exist in preferences it returns [defaultValue] passed to it or empty string i.e [DPrefsDefaultValue.DEFAULT_VALUE_INT.value] if [defaultValue] is not set.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * */
     fun getInt(
         key: String,
@@ -98,6 +134,8 @@ internal interface DPrefsManagerContract {
      * @param [key] This is the uniqueId with which the preference value was saved by [putBoolean]
      * @param [defaultValue] A [Boolean] that will be returned in the event that no preference value exists for the provided [key]
      * @return [Boolean] which is the saved value , if the value does not exist in preferences it returns [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_INT.value] if [defaultValue] is not set.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * */
     fun getBoolean(
         key: String,
@@ -110,6 +148,8 @@ internal interface DPrefsManagerContract {
      * @param [key] This is the uniqueId with which the preference value was saved by calling [putFloat] method
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
      * @return A [Float] which is the saved value, if the value does not exist in preferences it returns [defaultValue] passed to it or [DPrefsDefaultValue.DEFAULT_VALUE_FLOAT.value] if [defaultValue] is not set.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * */
     fun getFloat(
         key: String,
@@ -122,6 +162,8 @@ internal interface DPrefsManagerContract {
      * @param [key] This is the uniqueId with which the preference value was saved by calling [putLong] method
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
      * @return A [Long] which is the saved value, if the value does not exist in preferences it returns the [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_LONG.value] if [defaultValue] is not set.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * */
     fun getLong(
         key: String,
@@ -134,6 +176,8 @@ internal interface DPrefsManagerContract {
      * @param [key] This is the uniqueId with which the preference value was saved by calling [putDouble] method
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
      * @return A [Double] which is the saved value, if the value does not exist in preferences it returns the [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_DOUBLE.value] if [defaultValue] is not set.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * */
     fun getDouble(
         key: String,
@@ -148,6 +192,8 @@ internal interface DPrefsManagerContract {
      * @param [type] This is the type of the object you want to retrieve from the preferences. <br />
      * Note. This is also the type you must have saved initially.
      * @return An object of type [T] which was saved or null if no value exists for the [key]
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * @see [putObject]
      * */
     fun <T> getObject(key: String, type: T): Any?
@@ -158,6 +204,8 @@ internal interface DPrefsManagerContract {
      * Removes a preference value that had previously been saved into preferences.
      * Note, the preference value that you are targeting to remove by this can be of any type
      * @param [key] This is the uniqueId with which the preference value was saved
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * */
     fun removePref(key: String)
 
@@ -165,6 +213,8 @@ internal interface DPrefsManagerContract {
      * Clears the whole preferences.
      *
      * This is synonymous to dropping or deleting a complete table in sql database. Use with caution.
+     * @throws [DPrefsNotInitializedException] if the library has not been initialized.
+     * @see [DPrefs.initializeDPrefs]
      * */
     fun clearAllPrefs()
 
