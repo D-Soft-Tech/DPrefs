@@ -1,8 +1,9 @@
 package com.dsofttech.dprefs.utils.exceptions
+import com.dsofttech.dprefs.utils.DPrefs
 
 /**
  * Thrown when you try to use DPrefs Library when it has not first been initialized.
- * - To resolve: Go to your application class to initialize it.
+ * - To resolve: Go to your application class to initialize it by calling [DPrefs.initializeDPrefs]
  *
  * @author Adebayo Oloyede
  * @since 1.0.0 <br /> (June, 2023)

@@ -1,8 +1,8 @@
 package com.dsofttech.dprefs.utils.exceptions
 
 /**
- * Defines the exceptions that can be thrown by the library
- * subclasses include: [DPrefsNotInitializedException] and [DPrefsKeyAlreadyExistsException]
+ * Defines the exceptions that can be thrown by the library. <br />
+ * Subclasses include: [DPrefsNotInitializedException] and [DPrefsKeyAlreadyExistsException]
  *
  * @author Adebayo Oloyede
  * @since 1.0.0 <br /> (June, 2023)

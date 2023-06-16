@@ -105,7 +105,7 @@ internal interface DPrefsManagerContract {
      *
      * @param [key] This is the uniqueId with which the preference value was saved by the [putString] method
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
-     * @return [String] which is the saved value, if the value does not exist in preferences it returns [defaultValue] passed to it or empty string if [defaultValue] is not set.
+     * @return [String] which is the saved value, if the value does not exist in preferences it returns [defaultValue] passed to it or [DPrefsDefaultValue.DEFAULT_VALUE_STRING] if [defaultValue] is not set.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @see [DPrefs.initializeDPrefs]
      * */
@@ -119,7 +119,7 @@ internal interface DPrefsManagerContract {
      *
      * @param [key] This is the uniqueId with which the preference value was saved by [putInt]
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
-     * @return [Int] which is the saved value , if the value does not exist in preferences it returns [defaultValue] passed to it or empty string i.e [DPrefsDefaultValue.DEFAULT_VALUE_INT.value] if [defaultValue] is not set.
+     * @return [Int] which is the saved value , if the value does not exist in preferences it returns [defaultValue] passed to it or empty string i.e [DPrefsDefaultValue.DEFAULT_VALUE_INT] if [defaultValue] is not set.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @see [DPrefs.initializeDPrefs]
      * */
@@ -133,7 +133,7 @@ internal interface DPrefsManagerContract {
      *
      * @param [key] This is the uniqueId with which the preference value was saved by [putBoolean]
      * @param [defaultValue] A [Boolean] that will be returned in the event that no preference value exists for the provided [key]
-     * @return [Boolean] which is the saved value , if the value does not exist in preferences it returns [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_INT.value] if [defaultValue] is not set.
+     * @return [Boolean] which is the saved value , if the value does not exist in preferences it returns [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_BOOLEAN] if [defaultValue] is not set.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @see [DPrefs.initializeDPrefs]
      * */
@@ -147,7 +147,7 @@ internal interface DPrefsManagerContract {
      *
      * @param [key] This is the uniqueId with which the preference value was saved by calling [putFloat] method
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
-     * @return A [Float] which is the saved value, if the value does not exist in preferences it returns [defaultValue] passed to it or [DPrefsDefaultValue.DEFAULT_VALUE_FLOAT.value] if [defaultValue] is not set.
+     * @return A [Float] which is the saved value, if the value does not exist in preferences it returns [defaultValue] passed to it or [DPrefsDefaultValue.DEFAULT_VALUE_FLOAT] if [defaultValue] is not set.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @see [DPrefs.initializeDPrefs]
      * */
@@ -161,7 +161,7 @@ internal interface DPrefsManagerContract {
      *
      * @param [key] This is the uniqueId with which the preference value was saved by calling [putLong] method
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
-     * @return A [Long] which is the saved value, if the value does not exist in preferences it returns the [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_LONG.value] if [defaultValue] is not set.
+     * @return A [Long] which is the saved value, if the value does not exist in preferences it returns the [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_LONG] if [defaultValue] is not set.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @see [DPrefs.initializeDPrefs]
      * */
@@ -175,7 +175,7 @@ internal interface DPrefsManagerContract {
      *
      * @param [key] This is the uniqueId with which the preference value was saved by calling [putDouble] method
      * @param [defaultValue] This is the value that will be returned in the event that no preference value exists for the provided [key]
-     * @return A [Double] which is the saved value, if the value does not exist in preferences it returns the [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_DOUBLE.value] if [defaultValue] is not set.
+     * @return A [Double] which is the saved value, if the value does not exist in preferences it returns the [defaultValue] or [DPrefsDefaultValue.DEFAULT_VALUE_DOUBLE] if [defaultValue] is not set.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @see [DPrefs.initializeDPrefs]
      * */
@@ -189,7 +189,7 @@ internal interface DPrefsManagerContract {
      *
      * @param [key] The key with which you want to get the object from the preferences. <br />
      * Note. This is also the key with which the object was saved.
-     * @param [type] This is the type of the object you want to retrieve from the preferences. <br />
+     * @param [type] This is the type of the object you want to retrieve from the preferences.
      * Note. This is also the type you must have saved initially.
      * @return An object of type [T] which was saved or null if no value exists for the [key]
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
@@ -202,6 +202,7 @@ internal interface DPrefsManagerContract {
      * Removes a preference value.
      *
      * Removes a preference value that had previously been saved into preferences.
+     *
      * Note, the preference value that you are targeting to remove by this can be of any type
      * @param [key] This is the uniqueId with which the preference value was saved
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
