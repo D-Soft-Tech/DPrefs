@@ -1,6 +1,6 @@
 package com.dsofttech.dprefs.domanin // ktlint-disable filename
 
-import com.dsofttech.dprefs.models.enums.DPrefsDefaultValue
+import com.dsofttech.dprefs.enums.DPrefsDefaultValue
 import com.dsofttech.dprefs.utils.DPrefs
 import com.dsofttech.dprefs.utils.exceptions.DPrefsException
 import com.dsofttech.dprefs.utils.exceptions.DPrefsKeyAlreadyExistsException

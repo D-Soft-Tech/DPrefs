@@ -2,7 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
-    id 'org.jetbrains.dokka' version '1.8.20'
+    id 'org.jetbrains.dokka' /*version '1.8.20' */
 }
 
 android {
@@ -34,6 +34,31 @@ android {
 
 tasks.dokkaHtml.configure {
     outputDirectory.set(file("../dPrefsDocumentation/html"))
+}
+
+task cleanDokkaModuleDocs() {
+    delete file("../dPrefsDocumentation/html")
+}
+
+task createDokkaModuleDocs(type: Exec) {
+    commandLine('./../gradlew', 'dokkaHtml')
+}
+
+tasks.dokkaHtml.configure {
+    outputDirectory.set(file("../dPrefsDocumentation/html"))
+    def dPrefsLogo = file("../DPrefs/src/main/java/com/dsofttech/dprefs/d_prefs_logo.svg")
+    String dokkaBaseConfiguration = """
+    {
+      "customAssets": ["${dPrefsLogo}"],
+      "footerMessage": "Made with ❤️ by D-Soft-Tech, (c) 2023",
+      "separateInheritedMembers": false,
+      "mergeImplicitExpectActualDeclarations": false
+    }
+    """
+    pluginsMapConfiguration.set(
+            // fully qualified plugin name to json configuration
+            ["org.jetbrains.dokka.base.DokkaBase": dokkaBaseConfiguration]
+    )
 }
 
 dependencies {

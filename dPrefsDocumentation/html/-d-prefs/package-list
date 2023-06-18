@@ -1,16 +1,16 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
-$dokka.location:com.dsofttech.dprefs.models.enums////PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/index.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue.DEFAULT_VALUE_BOOLEAN///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-b-o-o-l-e-a-n/index.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue.DEFAULT_VALUE_DOUBLE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-d-o-u-b-l-e/index.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue.DEFAULT_VALUE_FLOAT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-f-l-o-a-t/index.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue.DEFAULT_VALUE_INT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-i-n-t/index.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue.DEFAULT_VALUE_LONG///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-l-o-n-g/index.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue.DEFAULT_VALUE_STRING///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-s-t-r-i-n-g/index.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue///PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/index.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue/value/#/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/value.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue/valueOf/#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/value-of.html
-$dokka.location:com.dsofttech.dprefs.models.enums/DPrefsDefaultValue/values/#/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.models.enums/-d-prefs-default-value/values.html
+$dokka.location:com.dsofttech.dprefs.enums////PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.enums/index.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue.DEFAULT_VALUE_BOOLEAN///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-b-o-o-l-e-a-n/index.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue.DEFAULT_VALUE_DOUBLE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-d-o-u-b-l-e/index.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue.DEFAULT_VALUE_FLOAT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-f-l-o-a-t/index.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue.DEFAULT_VALUE_INT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-i-n-t/index.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue.DEFAULT_VALUE_LONG///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-l-o-n-g/index.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue.DEFAULT_VALUE_STRING///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/-d-e-f-a-u-l-t_-v-a-l-u-e_-s-t-r-i-n-g/index.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue///PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/index.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue/value/#/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/value.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue/valueOf/#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/value-of.html
+$dokka.location:com.dsofttech.dprefs.enums/DPrefsDefaultValue/values/#/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.enums/-d-prefs-default-value/values.html
 $dokka.location:com.dsofttech.dprefs.utils.exceptions////PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.utils.exceptions/index.html
 $dokka.location:com.dsofttech.dprefs.utils.exceptions/DPrefsException///PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.utils.exceptions/-d-prefs-exception/index.html
 $dokka.location:com.dsofttech.dprefs.utils.exceptions/DPrefsException/DPrefsException/#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.utils.exceptions/-d-prefs-exception/-d-prefs-exception.html
@@ -37,7 +37,7 @@ $dokka.location:com.dsofttech.dprefs.utils/DPrefs/putLong/#kotlin.String#kotlin.
 $dokka.location:com.dsofttech.dprefs.utils/DPrefs/putObject/#kotlin.String#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.utils/-d-prefs/put-object.html
 $dokka.location:com.dsofttech.dprefs.utils/DPrefs/putString/#kotlin.String#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.utils/-d-prefs/put-string.html
 $dokka.location:com.dsofttech.dprefs.utils/DPrefs/removePref/#kotlin.String/PointingToDeclaration/-d-prefs/com.dsofttech.dprefs.utils/-d-prefs/remove-pref.html
-com.dsofttech.dprefs.models.enums
+com.dsofttech.dprefs.enums
 com.dsofttech.dprefs.utils
 com.dsofttech.dprefs.utils.exceptions
 

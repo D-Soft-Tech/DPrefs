@@ -3,8 +3,10 @@ package com.dsofttech.dprefs.utils
 /**
  * @author Adebayo Oloyede
  * @since 1.0.0 <br /> (June, 2023)
- * @see [https://www.linkedin.com/in/adebayo-oloyede]
- * @see [https://github.com/D-Soft-Tech]
+ *
+ * [LinkedIn Profile](https://www.linkedin.com/in/adebayo-oloyede)
+ *
+ * [Github Profile](https://github.com/D-Soft-Tech)
  * */
 internal object DPrefsConstants {
     /**
