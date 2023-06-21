@@ -80,3 +80,14 @@ For example:
   DPrefs.putInt(key, value)
 ```
   The above two examples show the convention that saving a preference using the ``DPrefs`` library follows. The only exception to this is puting an object and this is as shown below: 
+3. to save an object of type UserInfo shown in the json payload below:
+
+``` json
+{
+ "firstName": "Adebayo",
+ "lastName": "Oloyede",
+ "age": 31,
+ "address": "Oyo state, Nigeria",
+ "isLoggedIn": true
+}
+```
