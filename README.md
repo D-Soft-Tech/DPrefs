@@ -79,7 +79,8 @@ For example:
   val value = 12345
   DPrefs.putInt(key, value)
 ```
-  The above two examples show the convention that saving a preference using the ``DPrefs`` library follows. The only exception to this is puting an object and this is as shown below: 
+  The above two examples show the convention that saving a preference using the ``DPrefs`` library follows. The only exception to this is puting an object and this is as shown below:  
+  
 3. to save an object of type UserInfo shown in the json payload below:
 
 ``` json
@@ -133,7 +134,8 @@ For example:
    val defaultValue = 10
    val savedInt = DPrefs.getInt(key, defaultValue)
    ```
-  The above two examples show the convention for getting a preference using the ``DPrefs`` library follows. The only exception to this is puting an object and this is as shown below: 
+  The above two examples show the convention for getting a preference using the ``DPrefs`` library. The next item shows how to fetch an object:    
+  
 3. to get an object of type ``UserInfo`` saved above
 ``` kt
 val key = "OBJECT_VALUE_KEY"
