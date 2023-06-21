@@ -52,7 +52,7 @@ class MyActivity : AppCompatActivity() {
   }
 }
 ```
-::: info
+::: warning
  It is recommended to initialize the library in the application class
 :::
 
