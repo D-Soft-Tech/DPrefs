@@ -163,9 +163,11 @@ DPrefs.clearAllPrefs()
 
 ## Exceptions
 There are two exceptions that can be thrown by the library which are:  
-1. DPrefsNotInitializedException
+1. ``DPrefsNotInitializedException``  
+
 This is thrown when you try to use the library without first initializing it, to resolve this, go to your application class to initialize the library as shown above.
-2. DPrefsKeyAlreadyExistsException
+2. ``DPrefsKeyAlreadyExistsException``  
+
 This is thrown when you try save a preference value with a key that already exist. To resolve this, just use another set of character strings.
 
 ## DPrefsDefaultValue
