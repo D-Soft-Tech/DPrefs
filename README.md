@@ -1,7 +1,6 @@
 # DPrefs  
 
 ## About DPrefs
-===
 DPrefs is an Android library which takes care of all your key value shared preferences needs. This library handles everything for you and also encrypts your saved preferences thereby ensuring that your preferences data are securely saved and prevents information theft.  
 You can save all kinds of values such as:  
 * String
@@ -13,7 +12,8 @@ You can save all kinds of values such as:
 * Custom object
 
 ## How to setup DPrefs in your project
-===
+===  
+
 * Import the Library  
 
 Import the library to your project by adding the library into your app level build.gradle file as shown below:
@@ -60,7 +60,8 @@ That is all you need to do in other to set up the library
 ::: -->
 
 ## How to use
-===
+===  
+
 * To save a value  
 To save any value of any type you have to call ``DPrefs`` which is the instance of the library exposed to you by the library itself and call the method ``putDataTypeOfValue(key, value)`` where ``key`` is a string and ``value`` is what you want to save and is of type ``'DataTypeOfValue'``  
 
@@ -165,7 +166,8 @@ DPrefs.clearAllPrefs()
 ```
 
 ## Exceptions
-===
+===  
+
 There are two exceptions that can be thrown by the library which are:  
 1. DPrefsNotInitializedException
 This is thrown when you try to use the library without first initializing it, to resolve this, go to your application class to initialize the library as shown above.
