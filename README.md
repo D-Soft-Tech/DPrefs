@@ -52,7 +52,21 @@ class MyActivity : AppCompatActivity() {
   }
 }
 ```
-::: warning
+That is all you need to do in other to set up the library
+<!-- ::: warning
 *It is recommended to initialize the library in the application class*
-:::
+::: -->
 
+### How to use
+* To save a value  
+To save any value of any type you have to call ``DPrefs`` which is the instance of the library exposed to you by the library itself and call the method ``put<DataTypeOfValue>(key, value)`` where ``key`` is a string and ``value`` is what you want to save and is of type ``DataTypeOfValue``  
+**Nomenclature**
+> DPrefs::put<DataTypeOfValue>(key, value)  
+  
+  For example:
+  1. to save a string of value ``'String value to save'`` using the key ``'STRING_VALUE_KEY'`` 
+  ``` kt
+  val key = "STRING_VALUE_KEY"
+  val value = "String value to save"
+  DPrefs.putString(key, value)
+  ```
