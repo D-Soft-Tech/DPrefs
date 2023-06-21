@@ -59,14 +59,24 @@ That is all you need to do in other to set up the library
 
 ### How to use
 * To save a value  
-To save any value of any type you have to call ``DPrefs`` which is the instance of the library exposed to you by the library itself and call the method ``put<DataTypeOfValue>(key, value)`` where ``key`` is a string and ``value`` is what you want to save and is of type ``DataTypeOfValue``  
-**Nomenclature**
+To save any value of any type you have to call ``DPrefs`` which is the instance of the library exposed to you by the library itself and call the method ``putDataTypeOfValue(key, value)`` where ``key`` is a string and ``value`` is what you want to save and is of type ``'DataTypeOfValue'``  
+
+**Hence the Nomenclature the libray follows is like so: **
 > DPrefs::put<DataTypeOfValue>(key, value)  
+> Note: The ``key`` must always be a ``String``
   
-  For example:
-  1. to save a string of value ``'String value to save'`` using the key ``'STRING_VALUE_KEY'`` 
-  ``` kt
+For example:
+1. to save a string of value ``'String value to save'`` using the key ``'STRING_VALUE_KEY'`` 
+``` kt
   val key = "STRING_VALUE_KEY"
   val value = "String value to save"
   DPrefs.putString(key, value)
-  ```
+```
+  
+2. to save an int value ``12345`` using the key ``'INT_VALUE_KEY'`` 
+``` kt
+  val key = "INT_VALUE_KEY"
+  val value = 12345
+  DPrefs.putInt(key, value)
+```
+  The above two examples show the convention that saving a preference using the ``DPrefs`` library follows. The only exception to this is puting an object and this is as shown below: 
