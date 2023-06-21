@@ -61,7 +61,7 @@ That is all you need to do in other to set up the library
 * To save a value  
 To save any value of any type you have to call ``DPrefs`` which is the instance of the library exposed to you by the library itself and call the method ``putDataTypeOfValue(key, value)`` where ``key`` is a string and ``value`` is what you want to save and is of type ``'DataTypeOfValue'``  
 
-**Hence the Nomenclature the libray follows is like so: **
+** Hence the Nomenclature the libray follows is like so: **
 > DPrefs::put<DataTypeOfValue>(key, value)  
 > Note: The ``key`` must always be a ``String``
   
