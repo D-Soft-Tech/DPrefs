@@ -144,3 +144,26 @@ val savedObject = DPrefs.getObject(key, UserInfo::class)
 
 > Kindly check the ``DPrefsDefaultValue`` section for the full list of the defualt value that can be returned by the library.
 
+* Removing a preference value
+To remove a saved preference value, you only need to pass the key. The example below how to remove a string value that was saved using the ``key`` ``'STRING_VALUE_KEY'``. The same approach can be followed for int, boolean, object etc.
+
+Sample code:
+``` kt
+val key = "STRING_VALUE_KEY"
+DPrefs.removePref(key)
+```
+
+* Clearing all the Preferences
+To remove all the preference that has been saved all at once, call ``clearAllPrefs`` on the instance of the library as shown in the sample code below:
+
+Sample code for clearing the preferences:
+``` kt
+DPrefs.clearAllPrefs()
+```
+
+### Exceptions
+There are two exceptions that can be thrown by the library which are:  
+1. DPrefsNotInitializedException
+This is thrown when you try to use the library without first initializing it, to resolve this, go to your application class to initialize the library as shown above.
+2. DPrefsKeyAlreadyExistsException
+This is thrown when you try save a preference value with a key that already exist. To resolve this, just use another set of character strings.
