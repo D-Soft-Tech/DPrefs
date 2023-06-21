@@ -167,3 +167,22 @@ There are two exceptions that can be thrown by the library which are:
 This is thrown when you try to use the library without first initializing it, to resolve this, go to your application class to initialize the library as shown above.
 2. DPrefsKeyAlreadyExistsException
 This is thrown when you try save a preference value with a key that already exist. To resolve this, just use another set of character strings.
+
+## DPrefsDefaultValue
+This is an enum which represent the default value that the library returns in the case that no value is found and no ``defaultValue`` is set. There are various instances of it as shown in the list below:
+1. DPrefsDefaultValue.DEFAULT_VALUE_STRING
+   This is a default ``String`` that can be returned by the library and it's value is an empty string ``""``
+2. DPrefsDefaultValue.DEFAULT_VALUE_INT
+   This is a default ``Int`` that can be returned by the library and it's value is ``-1111111``
+3. DPrefsDefaultValue.DEFAULT_VALUE_BOOLEAN
+   This is a default ``Boolean`` that can be returned by the library and it's value is ``` kt false```
+4. DPrefsDefaultValue.DEFAULT_VALUE_FLOAT
+   This is a default ``float`` that can be returned by the library and it's value is ``` kt -0.1000001F```
+5. DPrefsDefaultValue.DEFAULT_VALUE_LONG
+   This is a default ``Long`` that can be returned by the library and it's value is ``` kt -1111111L```
+6. DPrefsDefaultValue.DEFAULT_VALUE_DOUBLE
+   This is a default ``Double`` that can be returned by the library and it's value is ``` kt -0.1000001```
+
+
+
+   
