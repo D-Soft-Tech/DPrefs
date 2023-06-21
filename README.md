@@ -115,3 +115,6 @@ val objectKey = "OBJECT_VALUE_KEY"
 
 DPrefs.putObject(objectKey, userA)
 ```
+
+* Remove a preference value
+To remove a particular preference, you only need to supply the ``key`` with which you saved the preference value and a ``default value``. This will return the value or the ``default value`` that 
