@@ -4,10 +4,14 @@ package com.dsofttech.dprefs.enums
  * Provides default values for DPrefsManager return values
  *
  * @author Adebayo Oloyede
- * @since 1.0.0 <br /> (June, 2023)
  * @param [value] This is the default value that a particular [DPrefsDefaultValue] provides
- * @see [https://www.linkedin.com/in/adebayo-oloyede]
- * @see [https://github.com/D-Soft-Tech]
+ *
+ *
+ * @since 1.0.0 <br /> (June, 2023)
+ *
+ * [LinkedIn](https://www.linkedin.com/in/adebayo-oloyede)
+ *
+ * [GitHub](https://github.com/D-Soft-Tech)
  * */
 enum class DPrefsDefaultValue(val value: Any) {
     /**

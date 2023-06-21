@@ -12,7 +12,7 @@ import com.dsofttech.dprefs.utils.exceptions.DPrefsNotInitializedException
  * @author Adebayo Oloyede
  * @since 1.0.0 <br /> (June, 2023)
  *
- * [Linkedin Profile](https://www.linkedin.com/in/adebayo-oloyede)
+ * [Linkedin Profile](https://www.linkedin.com/in/adebayo-oloyede/ "Adebayo Oloyede, Android Engineer")
  *
  * [Github Profile](https://www.github.com/D-Soft-Tech)
  * */
@@ -25,25 +25,22 @@ object DPrefs : DPrefsManagerContract {
     /**
      * Creates the instance of [DPrefsManager]
      *
-     * Call this in the onCreate callback method of the application class and pass it the applicationContext
+     * Call this in the onCreate callback method of the application class and pass it the applicationContext  <br>
+     *   <br>
      *
-     * <b>Sample Usage </b>
-     * ```
-     *
+     * **Sample Usage**
+     * ```  kt
      * class DPrefsTestApp : Application() {
      *      override fun onCreate() {
      *          super.onCreate()
      *          DPrefs.initializeDPrefs(applicationContext)
      *      }
      * }
-     *
-     * ```
+     *```
      *
      * @param [context] specifies the scope i.e the [Context] in which the instance of [DPrefs] is available in the project.
      *
      * Use the Application Context
-     *
-     * @sample [com.dsofttech.dprefs].[DPrefsTestApp].[onCreate]
      * */
     fun initializeDPrefs(context: Context) {
         dPrefs = DPrefsManager(context)
