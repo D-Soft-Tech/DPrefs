@@ -124,14 +124,21 @@ For example:
    ``` kt
    val key = "STRING_VALUE_KEY"
    val defaultValue = "NO_VALUE"
-   DPrefs.getString(key, defaultValue)
+   val savedString = DPrefs.getString(key, defaultValue)
    ```
 
 2. To get a ``Int``
    ``` kt
    val key = "INT_VALUE_KEY"
    val defaultValue = 10
-   DPrefs.getInt(key, defaultValue)
+   val savedInt = DPrefs.getInt(key, defaultValue)
    ```
+  The above two examples show the convention for getting a preference using the ``DPrefs`` library follows. The only exception to this is puting an object and this is as shown below: 
+3. to get an object of type ``UserInfo`` saved above
+``` kt
+val key = "OBJECT_VALUE_KEY"
+val savedObject = DPrefs.getObject(key, UserInfo::class)
+```
 
 > Kindly check the ``DPrefsDefaultValue`` section for the full list of the defualt value that can be returned by the library.
+
