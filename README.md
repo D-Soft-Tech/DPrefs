@@ -116,5 +116,22 @@ val objectKey = "OBJECT_VALUE_KEY"
 DPrefs.putObject(objectKey, userA)
 ```
 
-* Remove a preference value
-To remove a particular preference, you only need to supply the ``key`` with which you saved the preference value and a ``default value``. This will return the value or the ``default value`` that 
+* Fetching a preference value
+To get a particular preference value from the library, you only need to supply the ``key`` with which you saved the preference value and a ``default value``. This will return the saved value or the ``default value`` provided. In the event that the no value exists for the ``key`` provided and no ``default value`` is supplied, a ``default value`` provided by the library is returned.
+
+For example:
+1. To get a ``String``
+   ``` kt
+   val key = "STRING_VALUE_KEY"
+   val defaultValue = "NO_VALUE"
+   DPrefs.getString(key, defaultValue)
+   ```
+
+2. To get a ``Int``
+   ``` kt
+   val key = "INT_VALUE_KEY"
+   val defaultValue = 10
+   DPrefs.getInt(key, defaultValue)
+   ```
+
+> Kindly check the ``DPrefsDefaultValue`` section for the full list of the defualt value that can be returned by the library.
