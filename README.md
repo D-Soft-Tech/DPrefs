@@ -53,6 +53,6 @@ class MyActivity : AppCompatActivity() {
 }
 ```
 ::: warning
- It is recommended to initialize the library in the application class
+*It is recommended to initialize the library in the application class*
 :::
 
