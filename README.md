@@ -1,6 +1,8 @@
-<div align="right">
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/D-Soft-Tech/DPrefs/releases/latest)
-</div>
+<p align="center">
+  <a href="https://github.com/D-Soft-Tech/DPrefs/releases/latest" >
+   <img width="460" height="300" src="https://img.shields.io/badge/version-1.0.0-green.svg">
+  </a>
+</p>
 
 # DPrefs  
 
