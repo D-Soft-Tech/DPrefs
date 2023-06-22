@@ -22,14 +22,14 @@ You can save all kinds of values such as:
 
 Import the library to your project by adding the library into your app level build.gradle file as shown below:
 
-```
+``` groovy
 dependencies {
-  implementation 'com.github.D-Soft-Tech:DPrefs:$version'
+  implementation "com.github.D-Soft-Tech:DPrefs:$version"
 }
 ```
 
 Because the library is hosted on jitpack, You also need to add ``jitpack`` to your project if you haven't added it before: 
-```
+``` groovy
 allprojects {
   repositories {
     maven { url 'https://jitpack.io' }
