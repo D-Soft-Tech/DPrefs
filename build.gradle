@@ -1,5 +1,12 @@
 buildscript {
 
+    ext {
+        encrypted_shared_prefs = "1.1.0-alpha06"
+        dokka_version = "1.8.20"
+        gson_version = "2.10.1"
+        truth_library_version = "1.0.1"
+    }
+
     dependencies {
         classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.8.20")
         classpath("org.jetbrains.dokka:dokka-base:1.8.20")

@@ -1,3 +1,5 @@
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/D-Soft-Tech/DPrefs/releases/latest)
+
 # DPrefs  
 
 ## About DPrefs

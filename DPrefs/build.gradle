@@ -62,11 +62,6 @@ tasks.dokkaHtml.configure {
 }
 
 dependencies {
-
-    def encrypted_shared_prefs = "1.1.0-alpha06"
-    def dokka_version = "1.8.20"
-    def gson_version = "2.10.1"
-
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
@@ -79,6 +74,8 @@ dependencies {
     dokkaPlugin "org.jetbrains.dokka:android-documentation-plugin:$dokka_version"
     // Gson
     implementation "com.google.code.gson:gson:$gson_version"
+    // truth library for testing
+    testImplementation "com.google.truth:truth:$truth_library_version"
 }
 afterEvaluate {
     publishing {
