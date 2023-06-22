@@ -1,7 +1,6 @@
-<p align="center">
-  <!--img width="460" height="300" src="http://www.fillmurray.com/460/300" -->
+<div align="right">
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/D-Soft-Tech/DPrefs/releases/latest)
-</p>
+</div>
 
 # DPrefs  
 
