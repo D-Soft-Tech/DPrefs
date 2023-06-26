@@ -24,7 +24,7 @@ internal interface DPrefsManagerContract {
      * <br />
      *
      * <b><em>Sample Usage</em></b>
-     * ```
+     * ``` kt
      * val stringToSave = "The string you want to save"
      * val stringKey = "STRING_KEY
      * DPrefs.putString(stringKey, stringToSave)
@@ -42,8 +42,17 @@ internal interface DPrefsManagerContract {
     /**
      * Saves a preference value of type [Int]
      *
+     * <br />
+     *
+     * <b><em>Sample Usage</em></b>
+     * ``` kt
+     * val intToSave = 507
+     * val key = "INT_KEY
+     * DPrefs.putInt(key, intToSave)
+     * ```
+     *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getInt] method call
-     * @param [value] This is the exact string value that you want to save into preferences.
+     * @param [value] This is the ``int`` that you want to save into preferences.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
      * @see [DPrefs.initializeDPrefs]
@@ -54,8 +63,17 @@ internal interface DPrefsManagerContract {
     /**
      * Saves a preference value of type [Boolean]
      *
+     * <br />
+     *
+     * <b><em>Sample Usage</em></b>
+     * ``` kt
+     * val booleanToSave = true
+     * val key = "BOOLEAN_KEY
+     * DPrefs.putBoolean(key, booleanToSave)
+     * ```
+     *
      * @param [key] This is the uniqueId with which the preference value will be saved. this is also what should be used to retrieve the saved value from preference by passing it to [getBoolean] method call
-     * @param [value] This is the boolean value that you want to save into preference.
+     * @param [value] This is the ``boolean`` value that you want to save into preference.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
      * @see [DPrefs.initializeDPrefs]
@@ -66,8 +84,17 @@ internal interface DPrefsManagerContract {
     /**
      * Saves a preference value of type [Float]
      *
+     * <br />
+     *
+     * <b><em>Sample Usage</em></b>
+     * ``` kt
+     * val floatToSave = true
+     * val key = "FLOAT_KEY
+     * DPrefs.putFloat(key, floatToSave)
+     * ```
+     *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getFloat] method call
-     * @param [value] This is the exact float value that you want to save into preferences.
+     * @param [value] This is the exact ``float`` value that you want to save into preferences.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
      * @see [DPrefs.initializeDPrefs]
@@ -78,8 +105,17 @@ internal interface DPrefsManagerContract {
     /**
      * Saves a preference value of type [Long]
      *
+     * <br />
+     *
+     * <b><em>Sample Usage</em></b>
+     * ``` kt
+     * val longToSave = 150L
+     * val key = "LONG_KEY
+     * DPrefs.putLong(key, longToSave)
+     * ```
+     *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getLong] method call
-     * @param [value] This is the exact Long value that you want to save into preferences.
+     * @param [value] This is the ``Long`` value that you want to save into preferences.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @throws [DPrefsKeyAlreadyExistsException] if the key already exists in preferences.
      * @see [DPrefs.initializeDPrefs]
@@ -89,6 +125,15 @@ internal interface DPrefsManagerContract {
 
     /**
      * Saves a preference value of type [Double]
+     *
+     * <br />
+     *
+     * <b><em>Sample Usage</em></b>
+     * ``` kt
+     * val doubleToSave = 123.03
+     * val key = "DOUBLE_KEY
+     * DPrefs.putDouble(key, doubleToSave)
+     * ```
      *
      * @param [key] This is the uniqueId with which the preference value will be saved, this is also what should be used to retrieve the saved value from preference by passing it to [getDouble] method call
      * @param [value] This is the exact Double value that you want to save into preferences.

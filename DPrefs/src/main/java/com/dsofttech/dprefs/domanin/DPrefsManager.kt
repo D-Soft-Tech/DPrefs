@@ -9,12 +9,12 @@ import com.dsofttech.dprefs.utils.DPrefsConstants.D_PREFS_FILE_NAME
 import com.google.gson.Gson
 
 /**
- * Delegates to [DPrefsManagerContract]
+ * An instance of [DPrefsManagerContract].
  * And provides implementation details for all it's contracts
  *
  * @author Adebayo Oloyede
  * @param [context] from [Context], provides the context in which this class should be available. Always provide application context if possible.
- * @return [DPrefsManagerContract]
+ *
  * @since 1.0.0 <br /> (June, 2023)
  *
  * [Github](https://github.com/D-Soft-Tech/DPrefs)
@@ -102,7 +102,7 @@ internal class DPrefsManager(private val context: Context) : DPrefsManagerContra
     }
 
     /**
-     * Delegates to [getObject] from [DPrefsManagerContract]
+     * [getObject] from [DPrefsManagerContract]
      *
      * @param [key] The key with which the object was saved, same as key in [DPrefsManagerContract.getObject]
      * @param [sharedPreferences] from [dSharedPrefs]
