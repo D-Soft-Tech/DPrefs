@@ -147,6 +147,45 @@ internal interface DPrefsManagerContract {
     /**
      * Save an object as a preference
      *
+     * <br />
+     *
+     * <b><em>Sample Usage</em></b>
+     *
+     * ``` json
+     {
+     "firstName": "Adebayo",
+     "lastName": "Oloyede",
+     "age": 31,
+     "address": "Oyo state, Nigeria",
+     "latitude": 3.3456987,
+     "longitude": 7.432765,
+     "isLoggedIn": true
+     }
+     ```
+
+     > The ``UserInfo`` data class can be modelled from the above ``json`` payload. like so:
+     ``` kt
+     // UserInfo Model
+     data class UserInfo(
+     val firstName: String,
+     val lastName: String,
+     val age: Int,
+     val address: String,
+     val latitude: Double,
+     val longitude: Double,
+     val isLoggedIn: Boolean
+     )
+
+     // Instantiate an object of UserInfo
+     val userA = UserInfo("Adebayo", "Oloyede", 31, "Oyo state, Nigeria", 3.3456987, 7.432765, true)
+
+     // save userA as preference
+     val objectKey = "OBJECT_VALUE_KEY"
+
+     DPrefs.putObject(objectKey, userA)
+     ```
+
+     *
      * @param [key] This is the uniqueId with which the object [value] will be saved, this is also what the saved object will be accessed by from preference by passing it to [getObject] method call
      * @param [value] This is the object that you want to save into preference.
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
