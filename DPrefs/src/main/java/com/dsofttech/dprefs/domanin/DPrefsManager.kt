@@ -13,11 +13,14 @@ import com.google.gson.Gson
  * And provides implementation details for all it's contracts
  *
  * @author Adebayo Oloyede
- * @since 1.0.0 <br /> (June, 2023)
  * @param [context] from [Context], provides the context in which this class should be available. Always provide application context if possible.
  * @return [DPrefsManagerContract]
- * @see [https://www.linkedin.com/in/adebayo-oloyede]
- * @see [https://github.com/D-Soft-Tech]
+ * @since 1.0.0 <br /> (June, 2023)
+ *
+ * [Github](https://github.com/D-Soft-Tech/DPrefs)
+ *
+ * [LinkedIn](https://www.linkedin.com/in/adebayo-oloyede)
+ *
  * */
 internal class DPrefsManager(private val context: Context) : DPrefsManagerContract {
     /**

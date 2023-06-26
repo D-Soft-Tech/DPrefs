@@ -9,9 +9,9 @@ package com.dsofttech.dprefs.enums
  *
  * @since 1.0.0 <br /> (June, 2023)
  *
- * [LinkedIn](https://www.linkedin.com/in/adebayo-oloyede)
+ * [Github](https://github.com/D-Soft-Tech/DPrefs)
  *
- * [GitHub](https://github.com/D-Soft-Tech)
+ * [LinkedIn](https://www.linkedin.com/in/adebayo-oloyede/ "Adebayo Oloyede, Android Engineer")
  * */
 enum class DPrefsDefaultValue(val value: Any) {
     /**

@@ -12,9 +12,9 @@ import com.dsofttech.dprefs.utils.exceptions.DPrefsNotInitializedException
  * @author Adebayo Oloyede
  * @since 1.0.0 <br /> (June, 2023)
  *
- * [Linkedin Profile](https://www.linkedin.com/in/adebayo-oloyede/ "Adebayo Oloyede, Android Engineer")
+ * [Github](https://github.com/D-Soft-Tech/DPrefs)
  *
- * [Github Profile](https://www.github.com/D-Soft-Tech)
+ * [LinkedIn](https://www.linkedin.com/in/adebayo-oloyede/ "Adebayo Oloyede, Android Engineer")
  * */
 object DPrefs : DPrefsManagerContract {
     /**

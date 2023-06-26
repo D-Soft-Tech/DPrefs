@@ -8,9 +8,9 @@ import com.dsofttech.dprefs.utils.DPrefs
  * @author Adebayo Oloyede
  * @since 1.0.0 <br /> (June, 2023)
  *
- * [LinkedIn Profile](https://www.linkedin.com/in/adebayo-oloyede)
+ * [Github](https://github.com/D-Soft-Tech/DPrefs)
  *
- * [Github Profile](https://github.com/D-Soft-Tech)
+ * [LinkedIn](https://www.linkedin.com/in/adebayo-oloyede/ "Adebayo Oloyede, Android Engineer")
  *
  * @see [DPrefsException]
  * */

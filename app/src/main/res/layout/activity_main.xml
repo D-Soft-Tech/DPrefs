@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Read String"
             app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rmStr"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -30,9 +30,9 @@
             android:layout_height="wrap_content"
             android:text="Read Int"
             app:layout_constraintBottom_toTopOf="@+id/button3"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/button"
             app:layout_constraintTop_toBottomOf="@+id/button"
             app:layout_constraintVertical_bias="0.5" />
 
@@ -42,9 +42,8 @@
             android:layout_height="wrap_content"
             android:text="Read Long"
             app:layout_constraintBottom_toTopOf="@+id/button5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="@+id/button2"
             app:layout_constraintTop_toBottomOf="@+id/button2"
             app:layout_constraintVertical_bias="0.5" />
 
@@ -53,10 +52,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Read Double"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/clrPrfs"
+            app:layout_constraintEnd_toEndOf="@+id/button5"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/button5"
             app:layout_constraintTop_toBottomOf="@+id/button5"
             app:layout_constraintVertical_bias="0.5" />
 
@@ -66,11 +65,83 @@
             android:layout_height="wrap_content"
             android:text="Read Object"
             app:layout_constraintBottom_toTopOf="@+id/button4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button3"
+            app:layout_constraintStart_toStartOf="@+id/button3"
             app:layout_constraintTop_toBottomOf="@+id/button3"
             app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/rmStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove String"
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toTopOf="@+id/button" />
+
+        <Button
+            android:id="@+id/rmInt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Int"
+            app:layout_constraintBottom_toBottomOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="@+id/rmStr"
+            app:layout_constraintStart_toStartOf="@+id/rmStr"
+            app:layout_constraintTop_toTopOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/rmLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Long"
+            app:layout_constraintBottom_toBottomOf="@+id/button3"
+            app:layout_constraintEnd_toEndOf="@+id/rmInt"
+            app:layout_constraintStart_toStartOf="@+id/rmInt"
+            app:layout_constraintTop_toTopOf="@+id/button3" />
+
+        <Button
+            android:id="@+id/rmObject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Object"
+            app:layout_constraintBottom_toBottomOf="@+id/button5"
+            app:layout_constraintEnd_toEndOf="@+id/rmLong"
+            app:layout_constraintStart_toStartOf="@+id/rmLong"
+            app:layout_constraintTop_toTopOf="@+id/button5" />
+
+        <Button
+            android:id="@+id/rmDouble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Double"
+            app:layout_constraintBottom_toBottomOf="@+id/button4"
+            app:layout_constraintEnd_toEndOf="@+id/rmObject"
+            app:layout_constraintStart_toStartOf="@+id/rmObject"
+            app:layout_constraintTop_toTopOf="@+id/button4" />
+
+        <Button
+            android:id="@+id/clrPrfs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Clear All Prefs"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Prefs"
+            app:layout_constraintBottom_toBottomOf="@+id/clrPrfs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/clrPrfs"
+            app:layout_constraintTop_toTopOf="@+id/clrPrfs" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -76,6 +76,7 @@ dependencies {
     implementation "com.google.code.gson:gson:$gson_version"
     // truth library for testing
     testImplementation "com.google.truth:truth:$truth_library_version"
+    androidTestImplementation "com.google.truth:truth:$truth_library_version"
 }
 afterEvaluate {
     publishing {

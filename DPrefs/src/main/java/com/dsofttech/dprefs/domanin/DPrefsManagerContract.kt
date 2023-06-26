@@ -10,10 +10,12 @@ import com.dsofttech.dprefs.utils.exceptions.DPrefsNotInitializedException
  * An interface that defines all the contracts that can be performed by this preferences library
  *
  * @author Adebayo Oloyede
+ *
  * @since 1.0.0 <br /> (June, 2023)
  *
- * @see [https://www.linkedin.com/in/adebayo-oloyede/]
- * @see [https://github.com/D-Soft-Tech]
+ * [Github](https://github.com/D-Soft-Tech/DPrefs)
+ *
+ * [LinkedIn](https://www.linkedin.com/in/adebayo-oloyede/ "Adebayo Oloyede, Android Engineer")
  * */
 internal interface DPrefsManagerContract {
     /**
