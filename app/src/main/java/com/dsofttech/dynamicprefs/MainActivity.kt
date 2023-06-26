@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         intViews()
 
         btnReadString.setOnClickListener {
-            val retrievedData = DPrefs.getString("PREFS_STRING")
+            val retrievedData = DPrefs.getString("PREFS_STRING", "PREFS_STRING")
             makeToast("PREFS_STRING", retrievedData)
         }
         btnReadInt.setOnClickListener {
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             makeToast("PREFS_INT", retrievedData.toString())
         }
         btnReadLong.setOnClickListener {
-            val retrievedData = DPrefs.getLong("PREFS_LONG")
+            val retrievedData = DPrefs.getLong("PREFS_LONG", 111L)
             makeToast("PREFS_LONG", "$retrievedData")
         }
         btnReadDouble.setOnClickListener {
