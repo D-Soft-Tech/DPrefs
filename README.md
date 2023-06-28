@@ -14,7 +14,7 @@ You can save all kinds of values such as:
 * Float
 * Boolean
 * Long
-* Double and even
+* Double and
 * Custom object
 
 ## How to setup DPrefs in your project 
@@ -49,12 +49,32 @@ class MyApplicationClass : Application() {
 }
 ```
 
+```  java
+public class MyApplicationClass extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        DPrefs.INSTANCE.initializeDPrefs(getApplicationContext());
+    }
+}
+```
+
 If for any reason you want the preferences to only have an activity scope, then instead initialize the library in the ``onCreate()`` callback function of the activity as shown below:
 ``` kt
 class MyActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     DPrefs.initializeDPrefs(this)
+  }
+}
+```
+
+``` java
+public class MyActivity extends AppCompatActivity {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    DPrefs.INSTANCE.initializeDPrefs(this);
   }
 }
 ```
@@ -65,9 +85,9 @@ That is all you need to do in other to set up the library
 
 ## How to use
 * To save a value  
-To save any value of any type you have to call ``DPrefs`` which is the instance of the library exposed to you by the library itself and call the method ``putDataTypeOfValue(key, value)`` where ``key`` is a string and ``value`` is what you want to save and is of type ``'DataTypeOfValue'``  
+To save any value of any type you have to call ``DPrefs`` which is the instance of the library exposed to you by the library itself and call the method ``put\<DataTypeOfValue\>(key, value)`` where ``key`` is a string and ``value`` is what you want to save and is of type ``'DataTypeOfValue'``  
 
-** Hence the Nomenclature the libray follows is like so: **
+** Hence the Nomenclature the library follows is like so: **
 > DPrefs::put<DataTypeOfValue>(key, value)  
 > Note: The ``key`` must always be a ``String``
   
@@ -77,6 +97,12 @@ For example:
   val key = "STRING_VALUE_KEY"
   val value = "String value to save"
   DPrefs.putString(key, value)
+```  
+
+``` java
+  String key = "STRING_VALUE_KEY";
+  String value = "String value to save";
+  DPrefs.INSTANCE.putString(key, value);
 ```
   
 2. to save an int value ``12345`` using the key ``'INT_VALUE_KEY'`` 
@@ -84,8 +110,14 @@ For example:
   val key = "INT_VALUE_KEY"
   val value = 12345
   DPrefs.putInt(key, value)
+```  
+
+``` java
+  String key = "INT_VALUE_KEY";
+  int value = 12345;
+  DPrefs.INSTANCE.putInt(key, value);
 ```
-  The above two examples show the convention that saving a preference using the ``DPrefs`` library follows. The only exception to this is puting an object and this is as shown below:  
+  The above two examples show the convention that saving a preference using the ``DPrefs`` library follows. The only exception to this is putting an object and this is as shown below:  
   
 3. to save an object of type UserInfo shown in the json payload below:
 
@@ -102,18 +134,22 @@ For example:
 ```
 
 The ``UserInfo`` data class can be modelled from the above ``json`` payload. like so:
+> The ``UserInfo`` data class can be modelled from the above ``json`` payload. like so:
 ``` kt
 // UserInfo Model
 data class UserInfo(
-  val firstName: String,
-  val lastName: String,
-  val age: Int,
-  val address: String,
-  val latitude: Double,
-  val longitude: Double,
-  val isLoggedIn: Boolean
+val firstName: String,
+val lastName: String,
+val age: Int,
+val address: String,
+val latitude: Double,
+val longitude: Double,
+val isLoggedIn: Boolean
 )
+```
 
+* <b><em>Sample Usage ``Kotlin``</em></b>
+``` kt
 // Instantiate an object of UserInfo
 val userA = UserInfo("Adebayo", "Oloyede", 31, "Oyo state, Nigeria", 3.3456987, 7.432765, true)
 
@@ -121,6 +157,17 @@ val userA = UserInfo("Adebayo", "Oloyede", 31, "Oyo state, Nigeria", 3.3456987, 
 val objectKey = "OBJECT_VALUE_KEY"
 
 DPrefs.putObject(objectKey, userA)
+```
+ 
+* <b><em>Sample Usage ``Java``</em></b>
+
+``` java
+ // Instantiate an object of UserInfo
+ UserInfo userA = new UserInfo("Adebayo", "Oloyede", 31, "Oyo state, Nigeria", 3.3456987, 7.432765, true);
+
+ // save userA as preference
+ String objectKey = "OBJECT_VALUE_KEY";
+ DPrefs.INSTANCE.putObject(objectKey, userA);
 ```
 
 * Fetching a preference value
@@ -133,12 +180,24 @@ For example:
    val defaultValue = "NO_VALUE"
    val savedString = DPrefs.getString(key, defaultValue)
    ```
+   
+   ``` java
+   String key = "STRING_VALUE_KEY";
+   String defaultValue = "NO_VALUE";
+   String savedString = DPrefs.INSTANCE.getString(key, defaultValue);
+   ```
 
 2. To get a ``Int``
    ``` kt
    val key = "INT_VALUE_KEY"
    val defaultValue = 10
    val savedInt = DPrefs.getInt(key, defaultValue)
+   ```
+
+   ``` java
+   String key = "INT_VALUE_KEY";
+   int defaultValue = 10;
+   int savedInt = DPrefs.INSTANCE.getInt(key, defaultValue);
    ```
   The above two examples show the convention for getting a preference using the ``DPrefs`` library. The next item shows how to fetch an object:    
   
@@ -148,7 +207,12 @@ val key = "OBJECT_VALUE_KEY"
 val savedObject = DPrefs.getObject(key, UserInfo::class)
 ```
 
-> Kindly check the ``DPrefsDefaultValue`` section for the full list of the defualt value that can be returned by the library.
+``` java
+String key = "OBJECT_VALUE_KEY";
+UserInfo savedObject = DPrefs.INSTANCE.getObject(key, UserInfo.class);
+```
+
+> Kindly check the ``DPrefsDefaultValue`` section for the full list of the default value that can be returned by the library.
 
 * Removing a preference value
 To remove a saved preference value, you only need to pass the key. The example below how to remove a string value that was saved using the ``key`` ``'STRING_VALUE_KEY'``. The same approach can be followed for int, boolean, object etc.
@@ -159,12 +223,21 @@ val key = "STRING_VALUE_KEY"
 DPrefs.removePref(key)
 ```
 
+``` java
+String key = "STRING_VALUE_KEY";
+DPrefs.INSTANCE.removePref(key);
+```
+
 * Clearing all the Preferences
 To remove all the preference that has been saved all at once, call ``clearAllPrefs`` on the instance of the library as shown in the sample code below:
 
 Sample code for clearing the preferences:
 ``` kt
 DPrefs.clearAllPrefs()
+```
+
+``` java
+DPrefs.INSTANCE.clearAllPrefs();
 ```
 
 ## Exceptions
