@@ -39,6 +39,7 @@ allprojects {
 * Initialize the library
 
 Initialize the library in the application class, this will make the library have an application wide scope and make the preferences you saved with it to be available throughout the application. This is the recommended way  
+
 \- Kotlin:
 ```  kt
 class MyApplicationClass : Application() {
@@ -61,6 +62,7 @@ public class MyApplicationClass extends Application {
 
 If for any reason you want the preferences to only have an activity scope, then instead initialize the library in the ``onCreate()`` callback function of the activity as shown below:  
 \- Kotlin:
+
 ``` kt
 class MyActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,13 +96,14 @@ To save any value of any type you have to call ``DPrefs`` which is the instance 
   
 For example:
 1. to save a string of value ``'String value to save'`` using the key ``'STRING_VALUE_KEY'``  
+
 \- Kotlin:
 ``` kt
   val key = "STRING_VALUE_KEY"
   val value = "String value to save"
   DPrefs.putString(key, value)
 ```  
-\- Java:
+   \- Java:
 ``` java
   String key = "STRING_VALUE_KEY";
   String value = "String value to save";
