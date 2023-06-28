@@ -61,6 +61,7 @@ public class MyApplicationClass extends Application {
 ```
 
 If for any reason you want the preferences to only have an activity scope, then instead initialize the library in the ``onCreate()`` callback function of the activity as shown below:  
+
 \- Kotlin:
 
 ``` kt
@@ -98,6 +99,7 @@ For example:
 1. to save a string of value ``'String value to save'`` using the key ``'STRING_VALUE_KEY'``  
 
 \- Kotlin:
+
 ``` kt
   val key = "STRING_VALUE_KEY"
   val value = "String value to save"
@@ -110,13 +112,14 @@ For example:
   DPrefs.INSTANCE.putString(key, value);
 ```
   
-2. to save an int value ``12345`` using the key ``'INT_VALUE_KEY'`` 
+2. to save an int value ``12345`` using the key ``'INT_VALUE_KEY'``
+\- Kotlin:
 ``` kt
   val key = "INT_VALUE_KEY"
   val value = 12345
   DPrefs.putInt(key, value)
 ```  
-
+   \- Java:
 ``` java
   String key = "INT_VALUE_KEY";
   int value = 12345;
@@ -140,6 +143,7 @@ For example:
 
 The ``UserInfo`` data class can be modelled from the above ``json`` payload. like so:
 > The ``UserInfo`` data class can be modelled from the above ``json`` payload. like so:
+
 ``` kt
 // UserInfo Model
 data class UserInfo(
@@ -165,7 +169,6 @@ DPrefs.putObject(objectKey, userA)
 ```
  
 * <b><em>Sample Usage ``Java``</em></b>
-
 ``` java
  // Instantiate an object of UserInfo
  UserInfo userA = new UserInfo("Adebayo", "Oloyede", 31, "Oyo state, Nigeria", 3.3456987, 7.432765, true);
@@ -180,12 +183,15 @@ To get a particular preference value from the library, you only need to supply t
 
 For example:
 1. To get a ``String``
+
+   \- Kotlin:
    ``` kt
    val key = "STRING_VALUE_KEY"
    val defaultValue = "NO_VALUE"
    val savedString = DPrefs.getString(key, defaultValue)
    ```
    
+   \- Java:
    ``` java
    String key = "STRING_VALUE_KEY";
    String defaultValue = "NO_VALUE";
@@ -193,12 +199,15 @@ For example:
    ```
 
 2. To get a ``Int``
+
+\- Kotlin:
    ``` kt
    val key = "INT_VALUE_KEY"
    val defaultValue = 10
    val savedInt = DPrefs.getInt(key, defaultValue)
    ```
 
+\- Java:
    ``` java
    String key = "INT_VALUE_KEY";
    int defaultValue = 10;
@@ -207,11 +216,14 @@ For example:
   The above two examples show the convention for getting a preference using the ``DPrefs`` library. The next item shows how to fetch an object:    
   
 3. to get an object of type ``UserInfo`` saved above
+
+\- Kotlin:
 ``` kt
 val key = "OBJECT_VALUE_KEY"
 val savedObject = DPrefs.getObject(key, UserInfo::class)
 ```
 
+\- Java:
 ``` java
 String key = "OBJECT_VALUE_KEY";
 UserInfo savedObject = DPrefs.INSTANCE.getObject(key, UserInfo.class);
@@ -223,11 +235,14 @@ UserInfo savedObject = DPrefs.INSTANCE.getObject(key, UserInfo.class);
 To remove a saved preference value, you only need to pass the key. The example below how to remove a string value that was saved using the ``key`` ``'STRING_VALUE_KEY'``. The same approach can be followed for int, boolean, object etc.
 
 Sample code:
+
+\- Kotlin:
 ``` kt
 val key = "STRING_VALUE_KEY"
 DPrefs.removePref(key)
 ```
 
+\- Java:
 ``` java
 String key = "STRING_VALUE_KEY";
 DPrefs.INSTANCE.removePref(key);
@@ -237,10 +252,13 @@ DPrefs.INSTANCE.removePref(key);
 To remove all the preference that has been saved all at once, call ``clearAllPrefs`` on the instance of the library as shown in the sample code below:
 
 Sample code for clearing the preferences:
+
+\- Kotlin:
 ``` kt
 DPrefs.clearAllPrefs()
 ```
 
+\- Java:
 ``` java
 DPrefs.INSTANCE.clearAllPrefs();
 ```
