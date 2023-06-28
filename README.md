@@ -112,7 +112,9 @@ For example:
   DPrefs.INSTANCE.putString(key, value);
 ```
   
+
 2. to save an int value ``12345`` using the key ``'INT_VALUE_KEY'``
+
 \- Kotlin:
 ``` kt
   val key = "INT_VALUE_KEY"
@@ -125,6 +127,7 @@ For example:
   int value = 12345;
   DPrefs.INSTANCE.putInt(key, value);
 ```
+
   The above two examples show the convention that saving a preference using the ``DPrefs`` library follows. The only exception to this is putting an object and this is as shown below:  
   
 3. to save an object of type UserInfo shown in the json payload below:
@@ -198,16 +201,17 @@ For example:
    String savedString = DPrefs.INSTANCE.getString(key, defaultValue);
    ```
 
+
 2. To get a ``Int``
 
-\- Kotlin:
+   \- Kotlin:
    ``` kt
    val key = "INT_VALUE_KEY"
    val defaultValue = 10
    val savedInt = DPrefs.getInt(key, defaultValue)
    ```
 
-\- Java:
+   \- Java:
    ``` java
    String key = "INT_VALUE_KEY";
    int defaultValue = 10;
@@ -215,21 +219,23 @@ For example:
    ```
   The above two examples show the convention for getting a preference using the ``DPrefs`` library. The next item shows how to fetch an object:    
   
+
 3. to get an object of type ``UserInfo`` saved above
 
-\- Kotlin:
-``` kt
-val key = "OBJECT_VALUE_KEY"
-val savedObject = DPrefs.getObject(key, UserInfo::class)
-```
+   \- Kotlin:
+   ``` kt
+   val key = "OBJECT_VALUE_KEY"
+   val savedObject = DPrefs.getObject(key, UserInfo::class)
+   ```
 
-\- Java:
-``` java
-String key = "OBJECT_VALUE_KEY";
-UserInfo savedObject = DPrefs.INSTANCE.getObject(key, UserInfo.class);
-```
+   \- Java:
+   ``` java
+   String key = "OBJECT_VALUE_KEY";
+   UserInfo savedObject = DPrefs.INSTANCE.getObject(key, UserInfo.class);
+   ```
 
 > Kindly check the ``DPrefsDefaultValue`` section for the full list of the default value that can be returned by the library.
+
 
 * Removing a preference value
 To remove a saved preference value, you only need to pass the key. The example below how to remove a string value that was saved using the ``key`` ``'STRING_VALUE_KEY'``. The same approach can be followed for int, boolean, object etc.
@@ -247,6 +253,7 @@ DPrefs.removePref(key)
 String key = "STRING_VALUE_KEY";
 DPrefs.INSTANCE.removePref(key);
 ```
+
 
 * Clearing all the Preferences
 To remove all the preference that has been saved all at once, call ``clearAllPrefs`` on the instance of the library as shown in the sample code below:
