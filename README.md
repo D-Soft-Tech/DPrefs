@@ -59,7 +59,8 @@ public class MyApplicationClass extends Application {
 }
 ```
 
-If for any reason you want the preferences to only have an activity scope, then instead initialize the library in the ``onCreate()`` callback function of the activity as shown below:
+If for any reason you want the preferences to only have an activity scope, then instead initialize the library in the ``onCreate()`` callback function of the activity as shown below:  
+\- Kotlin:
 ``` kt
 class MyActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,7 +69,7 @@ class MyActivity : AppCompatActivity() {
   }
 }
 ```
-
+\- Java:
 ``` java
 public class MyActivity extends AppCompatActivity {
   @Override
@@ -92,13 +93,14 @@ To save any value of any type you have to call ``DPrefs`` which is the instance 
 > Note: The ``key`` must always be a ``String``
   
 For example:
-1. to save a string of value ``'String value to save'`` using the key ``'STRING_VALUE_KEY'`` 
+1. to save a string of value ``'String value to save'`` using the key ``'STRING_VALUE_KEY'``  
+\- Kotlin:
 ``` kt
   val key = "STRING_VALUE_KEY"
   val value = "String value to save"
   DPrefs.putString(key, value)
 ```  
-
+\- Java:
 ``` java
   String key = "STRING_VALUE_KEY";
   String value = "String value to save";
