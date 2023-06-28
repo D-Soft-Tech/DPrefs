@@ -38,8 +38,8 @@ allprojects {
 ```
 * Initialize the library
 
-Initialize the library in the application class, this will make the library have an application wide scope and make the preferences you saved with it to be available throughout the application. This is the recommended way
-
+Initialize the library in the application class, this will make the library have an application wide scope and make the preferences you saved with it to be available throughout the application. This is the recommended way  
+\- Kotlin:
 ```  kt
 class MyApplicationClass : Application() {
     override fun onCreate() {
@@ -48,7 +48,7 @@ class MyApplicationClass : Application() {
     }
 }
 ```
-
+\- Java:  
 ```  java
 public class MyApplicationClass extends Application {
     @Override
