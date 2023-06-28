@@ -1,4 +1,4 @@
-package com.dsofttech.dprefs.enums
+package Default Values
 
 /**
  * Provides default values for DPrefsManager return values

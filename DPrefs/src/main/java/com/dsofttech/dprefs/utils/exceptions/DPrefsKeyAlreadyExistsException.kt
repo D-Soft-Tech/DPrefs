@@ -1,4 +1,4 @@
-package com.dsofttech.dprefs.utils.exceptions
+package Exceptions
 
 /**
  * Thrown when try to put a preference value with a key that already exists.

@@ -1,11 +1,11 @@
 package com.dsofttech.dprefs.domanin
 
+import DPrefs.DPrefsConstants.D_PREFS_FILE_NAME
+import Default.DPrefsDefaultValue
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
-import com.dsofttech.dprefs.enums.DPrefsDefaultValue
-import com.dsofttech.dprefs.utils.DPrefsConstants.D_PREFS_FILE_NAME
 import com.google.gson.Gson
 
 /**

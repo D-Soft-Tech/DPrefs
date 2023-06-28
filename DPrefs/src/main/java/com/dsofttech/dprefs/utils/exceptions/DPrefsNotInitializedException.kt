@@ -1,5 +1,5 @@
-package com.dsofttech.dprefs.utils.exceptions
-import com.dsofttech.dprefs.utils.DPrefs
+package Exceptions
+import DPrefs Instance.DPrefs
 
 /**
  * Thrown when you try to use DPrefs Library when it has not first been initialized.

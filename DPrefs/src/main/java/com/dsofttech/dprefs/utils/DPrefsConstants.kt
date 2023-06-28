@@ -1,4 +1,4 @@
-package com.dsofttech.dprefs.utils
+package DPrefs Instance
 
 /**
  * @author Adebayo Oloyede

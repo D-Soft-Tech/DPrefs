@@ -1,7 +1,7 @@
 package com.dsofttech.dynamicprefs
 
 import android.app.Application
-import com.dsofttech.dprefs.utils.DPrefs
+import DPrefs Instance.DPrefs
 
 class DPrefsTestApp : Application() {
     override fun onCreate() {

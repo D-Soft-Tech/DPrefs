@@ -16,12 +16,12 @@ This package contains two classes:
     This interface contains the possible operations that can be performed by this library.
 2. DPrefsManager
     This is the implementation class for the above interface, DPrefsManagerContract
-# Package com.dsofttech.dPrefs.enums
+# Package Default Values
 This package contains 1 enum class, DPrefsDefaultValue which is the default values that can be returned by this library.
 # Package com.desofttech.dprefs.utils
 This package contains a package, exceptions, and 2 objects DPrefsConstants and DPrefs
 DPrefs: This is the public object which also implements DPrefsManagerContract but delegates to an instance of DPrefsManager.
  This is the instance of the library that you interact with.
 DPrefsConstants: This contains the file name that the generated file will have.
-# Package com.dsofttech.dprefs.utils.exceptions
+# Package Exceptions
 This package contains all the exceptions that can be thrown by the library
