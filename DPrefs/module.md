@@ -19,9 +19,9 @@ This package contains two classes:
 # Package Default Values
 This package contains 1 enum class, DPrefsDefaultValue which is the default values that can be returned by this library.
 # Package com.desofttech.dprefs.utils
-This package contains a package, exceptions, and 2 objects DPrefsConstants and DPrefs
+This package contains a package, exceptions, and 2 objects com.dsofttech.dprefs.utils.DPrefsConstants and DPrefs
 DPrefs: This is the public object which also implements DPrefsManagerContract but delegates to an instance of DPrefsManager.
  This is the instance of the library that you interact with.
-DPrefsConstants: This contains the file name that the generated file will have.
+com.dsofttech.dprefs.utils.DPrefsConstants: This contains the file name that the generated file will have.
 # Package Exceptions
 This package contains all the exceptions that can be thrown by the library

@@ -1,10 +1,10 @@
 package com.dsofttech.dprefs.utils
 
-import Exceptions.DPrefsKeyAlreadyExistsException
-import Exceptions.DPrefsNotInitializedException
 import android.content.Context
 import com.dsofttech.dprefs.domanin.DPrefsManager
 import com.dsofttech.dprefs.domanin.DPrefsManagerContract
+import com.dsofttech.dprefs.utils.exceptions.DPrefsKeyAlreadyExistsException
+import com.dsofttech.dprefs.utils.exceptions.DPrefsNotInitializedException
 
 /**
  * Creates and exposes an instance of [DPrefsManagerContract]

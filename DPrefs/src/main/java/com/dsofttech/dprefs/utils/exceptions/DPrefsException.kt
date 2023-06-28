@@ -1,4 +1,4 @@
-package Exceptions
+package com.dsofttech.dprefs.utils.exceptions
 
 /**
  * Defines the exceptions that can be thrown by the library.<br />

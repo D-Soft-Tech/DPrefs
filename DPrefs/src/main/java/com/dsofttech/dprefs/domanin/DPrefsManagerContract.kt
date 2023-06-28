@@ -1,10 +1,10 @@
-package com.dsofttech.dprefs.domanin // ktlint-disable filename
+package com.dsofttech.dprefs.domanin
 
-import Default Values.DPrefsDefaultValue
-import DPrefs Instance.DPrefs
-import Exceptions.DPrefsException
-import Exceptions.DPrefsKeyAlreadyExistsException
-import Exceptions.DPrefsNotInitializedException
+import com.dsofttech.dprefs.enums.DPrefsDefaultValue
+import com.dsofttech.dprefs.utils.DPrefs
+import com.dsofttech.dprefs.utils.exceptions.DPrefsException
+import com.dsofttech.dprefs.utils.exceptions.DPrefsKeyAlreadyExistsException
+import com.dsofttech.dprefs.utils.exceptions.DPrefsNotInitializedException
 
 /**
  * An interface that defines all the contracts that can be performed by this preferences library

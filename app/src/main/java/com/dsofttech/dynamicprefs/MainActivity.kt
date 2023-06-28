@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import DPrefs Instance.DPrefs
+import com.dsofttech.dprefs.utils.DPrefs
 import com.dsofttech.dynamicprefs.databinding.ActivityMainBinding
 import com.dsofttech.dynamicprefs.utils.TestObject
 import com.dsofttech.dynamicprefs.utils.Utils.getSampleObject
