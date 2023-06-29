@@ -1,4 +1,4 @@
-package com.dsofttech.dynamicprefs.utils
+package com.dsofttech.dprefs.data
 
 data class TestObject(
     val userName: String,
