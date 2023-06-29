@@ -68,7 +68,7 @@ class DPrefsManagerContractTest {
         @BeforeClass
         @JvmStatic
         fun setUpBeforeClass() {
-//            dPrefsManager.putString(STRING_KEY, STRING_VALUE)
+            // dPrefsManager.putString(STRING_KEY, STRING_VALUE)
             dPrefsManager.putInt(INT_KEY, INT_VALUE)
             dPrefsManager.putFloat(FLOAT_KEY, FLOAT_VALUE)
             dPrefsManager.putDouble(DOUBLE_KEY, DOUBLE_VALUE)

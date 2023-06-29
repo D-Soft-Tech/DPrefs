@@ -1,6 +1,6 @@
 <p align="right">
   <a href="https://github.com/D-Soft-Tech/DPrefs/releases/latest" >
-   <img src="https://img.shields.io/badge/version-1.0.0-green.svg">
+   <img src="https://img.shields.io/badge/version-1.0.1-green.svg">
   </a>
 </p>
 
