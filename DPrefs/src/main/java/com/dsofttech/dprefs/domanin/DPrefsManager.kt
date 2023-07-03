@@ -3,7 +3,7 @@ package com.dsofttech.dprefs.domanin
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKeys
+import androidx.security.crypto.MasterKey
 import com.dsofttech.dprefs.enums.DPrefsDefaultValue
 import com.dsofttech.dprefs.utils.DPrefsConstants.D_PREFS_FILE_NAME
 import com.google.gson.Gson
@@ -90,8 +90,10 @@ internal class DPrefsManager(private val context: Context) : DPrefsManagerContra
         dSharedPrefs.edit().putString(key, gson.toJson(value)).apply()
     }
 
-    override fun <T> getObject(key: String, type: T): Any? =
-        getObject<Any>(key, dSharedPrefs, gson)
+    override fun <T> getObject(key: String, type: Class<T>): T? {
+        val objString = getString(key)
+        return if (objString.isNotEmpty()) gson.fromJson(objString, type) else null
+    }
 
     override fun removePref(key: String) {
         dSharedPrefs.edit().remove(key).apply()
@@ -102,35 +104,18 @@ internal class DPrefsManager(private val context: Context) : DPrefsManagerContra
     }
 
     /**
-     * [getObject] from [DPrefsManagerContract]
-     *
-     * @param [key] The key with which the object was saved, same as key in [DPrefsManagerContract.getObject]
-     * @param [sharedPreferences] from [dSharedPrefs]
-     * @param [T] the object that was saved
-     * @see [DPrefsManagerContract.putObject]
-     * */
-    private inline fun <reified T> getObject(
-        key: String,
-        sharedPreferences: SharedPreferences,
-        gson: Gson,
-    ): T? =
-        sharedPreferences.getString(key, DPrefsDefaultValue.DEFAULT_VALUE_STRING.value as String?)
-            ?.let {
-                gson.fromJson(it, T::class.java)
-            }
-
-    /**
      * Creates the preferences instance
      *
      * @param [context] specifies the scope in the application where this instance should be available. Pass it the applicationContext.
      * @return [SharedPreferences] The preference object that is created
      * */
     private fun getEncryptedSharedPrefs(context: Context): SharedPreferences {
-        val masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+        val masterKey: MasterKey =
+            MasterKey.Builder(context).setKeyScheme(MasterKey.KeyScheme.AES256_GCM).build()
         return EncryptedSharedPreferences.create(
-            D_PREFS_FILE_NAME,
-            masterKeyAlias,
             context,
+            D_PREFS_FILE_NAME,
+            masterKey,
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,
         )

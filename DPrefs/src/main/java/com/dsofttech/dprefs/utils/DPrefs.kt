@@ -118,7 +118,7 @@ object DPrefs : DPrefsManagerContract {
         return dPrefs.getDouble(key, defaultValue)
     }
 
-    override fun <T> getObject(key: String, type: T): Any? {
+    override fun <T> getObject(key: String, type: Class<T>): T? {
         isDPrefsInitialized()
         return dPrefs.getObject(key, type)
     }
@@ -132,6 +132,9 @@ object DPrefs : DPrefsManagerContract {
         isDPrefsInitialized()
         dPrefs.clearAllPrefs()
     }
+
+    override fun doesKeyExists(key: String): Boolean =
+        dPrefs.doesKeyExists(key)
 
     /**
      * Checks if the library has been initialized before attempting to use it

@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             makeToast("PREFS_DOUBLE", "$retrievedData")
         }
         btnReadObject.setOnClickListener {
-            val retrievedData = DPrefs.getObject("PREFS_OBJECT", TestObject::class)
+            val retrievedData = DPrefs.getObject("PREFS_OBJECT", TestObject::class.java)
             makeToast("PREFS_OBJECT", retrievedData.toString())
         }
         btnRemoveString.setOnClickListener {

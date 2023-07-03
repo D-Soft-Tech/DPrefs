@@ -1,6 +1,6 @@
 <p align="right">
   <a href="https://github.com/D-Soft-Tech/DPrefs/releases/latest" >
-   <img src="https://img.shields.io/badge/version-1.0.1-green.svg">
+   <img src="https://img.shields.io/badge/version-1.0.2-green.svg">
   </a>
 </p>
 
@@ -254,6 +254,28 @@ String key = "STRING_VALUE_KEY";
 DPrefs.INSTANCE.removePref(key);
 ```
 
+* To check whether a ``key`` already exist
+Call ``doesKeyExists`` and pass it the ``key``. This will return a ``Boolean`` that tells whether the ``key`` exist or not. See example below:
+
+\- Kotlin:
+``` kt
+val key = "STRING_VALUE_KEY"
+val keyExist = DPrefs.doesKeyExists(key)
+
+if(keyExist) println("True") else println("False")
+```
+
+\- Java:
+``` java
+String key = "STRING_VALUE_KEY";
+boolean keyExist = DPrefs.INSTANCE.doesKeyExists(key);
+
+if(keyExist) {
+   System.out.println("True");
+} else {
+   System.out.println("False");
+}
+```
 
 * Clearing all the Preferences
 To remove all the preference that has been saved all at once, call ``clearAllPrefs`` on the instance of the library as shown in the sample code below:

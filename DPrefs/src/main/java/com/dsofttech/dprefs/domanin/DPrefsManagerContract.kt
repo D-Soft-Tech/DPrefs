@@ -492,9 +492,9 @@ internal interface DPrefsManagerContract {
      * @return An object of type [T] which was saved or null if no value exists for the [key]
      * @throws [DPrefsNotInitializedException] if the library has not been initialized.
      * @see [DPrefs.initializeDPrefs]
-     * @see [putObject]
+     * @see [DPrefsManagerContract.putObject]
      * */
-    fun <T> getObject(key: String, type: T): Any?
+    fun <T> getObject(key: String, type: Class<T>): T?
 
     /**
      * Removes a preference value.
@@ -558,5 +558,5 @@ internal interface DPrefsManagerContract {
      * @param [key] The key to be checked
      * @return true if the key already exists or false if not
      * */
-    fun doesKeyExists(key: String): Boolean = false
+    fun doesKeyExists(key: String): Boolean
 }
