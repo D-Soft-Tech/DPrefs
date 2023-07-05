@@ -48,43 +48,43 @@ object DPrefs : DPrefsManagerContract {
 
     override fun putString(key: String, value: String) {
         isDPrefsInitialized()
-        doesKeyNotExist(key)
+        // doesKeyNotExist(key)
         dPrefs.putString(key, value)
     }
 
     override fun putInt(key: String, value: Int) {
         isDPrefsInitialized()
-        doesKeyNotExist(key)
+        // doesKeyNotExist(key)
         dPrefs.putInt(key, value)
     }
 
     override fun putBoolean(key: String, value: Boolean) {
         isDPrefsInitialized()
-        doesKeyNotExist(key)
+        // doesKeyNotExist(key)
         dPrefs.putBoolean(key, value)
     }
 
     override fun putFloat(key: String, value: Float) {
         isDPrefsInitialized()
-        doesKeyNotExist(key)
+        // doesKeyNotExist(key)
         dPrefs.putFloat(key, value)
     }
 
     override fun putLong(key: String, value: Long) {
         isDPrefsInitialized()
-        doesKeyNotExist(key)
+        // doesKeyNotExist(key)
         dPrefs.putLong(key, value)
     }
 
     override fun putDouble(key: String, value: Double) {
         isDPrefsInitialized()
-        doesKeyNotExist(key)
+        // doesKeyNotExist(key)
         dPrefs.putDouble(key, value)
     }
 
     override fun <T> putObject(key: String, value: T) {
         isDPrefsInitialized()
-        doesKeyNotExist(key)
+        // doesKeyNotExist(key)
         dPrefs.putObject(key, value)
     }
 

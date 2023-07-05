@@ -10,6 +10,7 @@ import com.dsofttech.dprefs.utils.DPrefs
 import com.dsofttech.dynamicprefs.databinding.ActivityMainBinding
 import com.dsofttech.dynamicprefs.utils.TestObject
 import com.dsofttech.dynamicprefs.utils.Utils.getSampleObject
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnRemoveObject: Button
     private lateinit var btnClearAllPrefs: Button
     private lateinit var btnResetAllPrefs: Button
+    private lateinit var putNewStringBtn: Button
+    private lateinit var readNewStringBtn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -71,6 +74,13 @@ class MainActivity : AppCompatActivity() {
         btnResetAllPrefs.setOnClickListener {
             setPrefs()
         }
+        putNewStringBtn.setOnClickListener {
+            setPrefForString()
+        }
+        readNewStringBtn.setOnClickListener {
+            val str = DPrefs.getString("PREFS_STRING_TWO_2")
+            Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun intViews() {
@@ -87,6 +97,8 @@ class MainActivity : AppCompatActivity() {
             btnRemoveObject = rmObject
             btnClearAllPrefs = clrPrfs
             btnResetAllPrefs = button12
+            putNewStringBtn = button6
+            readNewStringBtn = button7
         }
     }
 
@@ -96,6 +108,10 @@ class MainActivity : AppCompatActivity() {
         DPrefs.putLong("PREFS_LONG", 150L)
         DPrefs.putDouble("PREFS_DOUBLE", 123.03)
         DPrefs.putObject("PREFS_OBJECT", getSampleObject())
+    }
+
+    private fun setPrefForString() {
+        DPrefs.putString("PREFS_STRING_TWO_2", "PREFS_STRING_TWO_2===>" + Random.nextInt())
     }
 
     private fun makeToast(tag: String, message: String) {
