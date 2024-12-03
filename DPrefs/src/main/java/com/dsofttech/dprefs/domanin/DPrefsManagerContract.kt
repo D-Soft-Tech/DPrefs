@@ -118,7 +118,7 @@ internal interface DPrefsManagerContract {
      *
      * <b><em>Sample Usage ``Java``</em></b>
      * ``` java
-     * float floatToSave = 10.03f;
+     * Float floatToSave = 10.03f;
      * String key = "FLOAT_VALUE_KEY";
      * DPrefs.INSTANCE.putFloat(key, floatToSave);
      * ```
