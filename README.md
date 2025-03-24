@@ -292,6 +292,15 @@ DPrefs.clearAllPrefs()
 DPrefs.INSTANCE.clearAllPrefs();
 ```
 
+## IMPORTANT
+When using DPrefs in a release build, add the following to your proguard-rules.pro file
+```
+-keep class com.google.crypto.tink.proto.** { *; }
+-keep class com.google.crypto.tink.shaded.protobuf.** { *; }
+-keep class androidx.security.** { *; }
+-keepclassmembers class androidx.security.** { *; }
+```
+
 ## Exceptions
 There are two exceptions that can be thrown by the library which are:  
 1. ``DPrefsNotInitializedException``  
