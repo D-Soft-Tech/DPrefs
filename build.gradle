@@ -1,7 +1,7 @@
 buildscript {
 
     ext {
-        encrypted_shared_prefs = "1.1.0-alpha01"
+        encrypted_shared_prefs = "1.1.0-alpha02"
         dokka_version = "1.8.20"
         gson_version = "2.10.1"
         truth_library_version = "1.0.1"
