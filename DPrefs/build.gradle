@@ -85,7 +85,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.dsofttech.dprefs'
                 artifactId = 'dPrefs'
-                version = '1.0.1'
+                version = '1.0.8'
             }
         }
     }
